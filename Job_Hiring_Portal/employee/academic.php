@@ -547,13 +547,11 @@ $page = 1;
                                     $stmtb->execute();
                                     $resultb = $stmtb->fetchAll();
 
-                                    foreach($resultb as $rowb)
-                                    {
-										?>
-										<option <?php if ($ccountry == $rowb['country_name']) { print ' selected '; } ?> value="<?php echo $rowb['country_name']; ?>"><?php echo $rowb['country_name']; ?></option>
-										<?php
-		
-	                                }
+									foreach ($resultb as $rowb) {
+										$selected = ($ccountry == $rowb['country_name']) ? 'selected' : '';
+										echo '<option ' . $selected . ' value="' . $rowb['country_name'] . '">' . $rowb['country_name'] . '</option>';
+									}
+									
 
                                    
 									 ?>

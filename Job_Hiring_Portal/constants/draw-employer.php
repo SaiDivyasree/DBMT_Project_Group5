@@ -1,4 +1,5 @@
 <form name="frm" action="app/create-account.php" method="POST" autocomplete="off">
+<?php include 'constants/check_reply.php'; ?>
 <div class="login-box-wrapper">
 							
 <div class="modal-header">

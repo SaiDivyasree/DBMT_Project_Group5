@@ -1,11 +1,10 @@
 <form name="frm" action="app/create-account.php" method="POST" autocomplete="off">
-
-<div class="login-box-wrapper">
-							
+<?php include 'constants/check_reply.php'; ?>
+<div class="login-box-wrapper">						
 <div class="modal-header">
-
-				
+		
 <h4 class="modal-title text-center">Create your account for free</h4>
+	
 </div>
 
 <div class="modal-body">
