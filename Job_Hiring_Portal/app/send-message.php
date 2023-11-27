@@ -1,6 +1,8 @@
 <?php
 include '../constants/settings.php';
 
+include 'contact.php';
+
 $myfname = ucwords($_POST['fullname']);
 $myemail = $_POST['email'];
 $mymessage = $_POST['message'];
@@ -8,7 +10,6 @@ $mymessage = $_POST['message'];
 require '../mail/PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
-
 
 $mail->isSMTP();                                      
 $mail->Host = $smtp_host;
@@ -18,12 +19,12 @@ $mail->Password = $smtp_pass;
 $mail->SMTPSecure = 'tls';                   
 $mail->Port = 587;   
 
-$mail->setFrom($myemail, $myfname);
+$mail->setFrom($myemail, $myfname, true);
 $mail->addAddress($contact_mail);           
   
 $mail->isHTML(true);
 
-$mail->Subject = 'Contact';
+$mail->Subject = 'Contact Message by User';
 $mail->Body    = $mymessage;
 $mail->AltBody = $mymessage;
 

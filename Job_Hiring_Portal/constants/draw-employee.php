@@ -3,6 +3,8 @@
 <div class="login-box-wrapper">
 							
 <div class="modal-header">
+
+				
 <h4 class="modal-title text-center">Create your account for free</h4>
 </div>
 
@@ -36,13 +38,17 @@
 
 <div class="form-group"> 
 <label>Email Address</label>
-<input class="form-control" placeholder="Enter your email address" name="email" required type="text"> 
 <?php
-            // Display an error message if the email already exists
-    if (isset($_GET['p']) && ($_GET['p'] == 'Employee' || $_GET['p'] == 'Employer') && isset($_GET['r']) && $_GET['r'] == '4568') {
-        echo '<p style="color: red;">Email address already exists. Please use a different email.</p>';
+    if (isset($_GET['e'])) {
+        $error_code = $_GET['e'];
+        if ($error_code === 'exists') {
+            echo '<p style="color: red;">Email already exists. Please use a different email address.</p>';
+        } elseif ($error_code === 'db_error') {
+            echo '<p style="color: red;">Database error. Please try again later.</p>';
+        }
     }
 ?>
+<input class="form-control" placeholder="Enter your email address" name="email" required type="text">
 </div>
 												
 </div>

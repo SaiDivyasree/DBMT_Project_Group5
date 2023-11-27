@@ -70,7 +70,7 @@ class PHPMailer
      * The From email address for the message.
      * @var string
      */
-    public $From = 'root@localhost';
+    public $From = '';
 
     /**
      * The From name of the message.
@@ -1009,30 +1009,37 @@ class PHPMailer
      * @return boolean
      */
     public function setFrom($address, $name = '', $auto = true)
-    {
-        $address = trim($address);
-        $name = trim(preg_replace('/[\r\n]+/', '', $name)); //Strip breaks and trim
-        // Don't validate now addresses with IDN. Will be done in send().
-        if (($pos = strrpos($address, '@')) === false or
-            (!$this->has8bitChars(substr($address, ++$pos)) or !$this->idnSupported()) and
-            !$this->validateAddress($address)) {
-            $error_message = $this->lang('invalid_address') . " (setFrom) $address";
-            $this->setError($error_message);
-            $this->edebug($error_message);
-            if ($this->exceptions) {
-                throw new phpmailerException($error_message);
-            }
-            return false;
+{
+    $address = trim($address);
+    $name = trim(preg_replace('/[\r\n]+/', '', $name)); // Strip breaks and trim
+
+    // Validate the email address
+    if (
+        ($pos = strrpos($address, '@')) === false or
+        (!$this->has8bitChars(substr($address, ++$pos)) or !$this->idnSupported()) and
+        !$this->validateAddress($address)
+    ) {
+        $error_message = $this->lang('invalid_address') . " (setFrom) $address";
+        $this->setError($error_message);
+        $this->edebug($error_message);
+        if ($this->exceptions) {
+            throw new phpmailerException($error_message);
         }
-        $this->From = $address;
-        $this->FromName = $name;
-        if ($auto) {
-            if (empty($this->Sender)) {
-                $this->Sender = $address;
-            }
-        }
-        return true;
+        return false;
     }
+
+    // Set the "From" address and name
+    $this->From = $address;
+    $this->FromName = $name;
+
+    // Set the "Sender" address if $auto is true and it's not already set
+    if ($auto && empty($this->Sender)) {
+        $this->Sender = $address;
+    }
+
+    return true;
+}
+
 
     /**
      * Return the Message-ID header of the last email.

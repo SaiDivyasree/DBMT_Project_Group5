@@ -35,6 +35,16 @@
 
 <div class="form-group"> 
 <label>Email Address</label>
+<?php
+    if (isset($_GET['e'])) {
+        $error_code = $_GET['e'];
+        if ($error_code === 'exists') {
+            echo '<p style="color: red;">Email already exists. Please use a different email address.</p>';
+        } elseif ($error_code === 'db_error') {
+            echo '<p style="color: red;">Database error. Please try again later.</p>';
+        }
+    }
+?>
 <input class="form-control" placeholder="Enter your email address" name="email" required type="text"> 
 </div>
 												

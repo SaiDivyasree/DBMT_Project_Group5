@@ -33,7 +33,7 @@ $page = 1;
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Bwire Jobs - Professional Qualifications</title>
+	<title>CareerConnect Jobs - Professional Qualifications</title>
 	<meta name="description" content="Online Job Management / Job Portal" />
 	<meta name="keywords" content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
 	<meta name="author" content="BwireSoft">
@@ -43,7 +43,7 @@ $page = 1;
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="300" />
-    <meta property="og:image:alt" content="Bwire Jobs" />
+    <meta property="og:image:alt" content="CareerConnect Jobs" />
     <meta property="og:description" content="Online Job Management / Job Portal" />
 
 	<link rel="shortcut icon" href="../images/ico/favicon.png">
@@ -152,7 +152,7 @@ $page = 1;
 				<div class="container">
 				
 					<ol class="breadcrumb-list booking-step">
-						<li><a href="../">Bwire Jobs</a></li>
+						<li><a href="../">CareerConnect Jobs</a></li>
 						<li><span>Professional Qualifications</span></li>
 					</ol>
 					
@@ -610,8 +610,8 @@ $page = 1;
 									<div class="col-sm-6 col-md-4">
 									
 										<div class="footer-about-us">
-											<h5 class="footer-title">About Bwire Jobs</h5>
-											<p>Bwire Jobs is a job portal, online job management system developed by Bwire C Mashauri in february 2018.</p>
+											<h5 class="footer-title">About CareerConnect Jobs</h5>
+											<p>CareerConnect Jobs is a job portal, online job management system developed by Team Group 5 for the DBMT project in November 2023.</p>
 										
 										</div>
 
@@ -620,11 +620,11 @@ $page = 1;
 									<div class="col-sm-6 col-md-5 mt-30-xs">
 										<h5 class="footer-title">Quick Links</h5>
 										<ul class="footer-menu clearfix">
-											<li><a href="../">Home</a></li>
-											<li><a href="../job-list.php">Job List</a></li>
-											<li><a href="../employers.php">Employers</a></li>
-											<li><a href="../employees.php">Employees</a></li>
-											<li><a href="../contact.php">Contact Us</a></li>
+											<li><a href="./">Home</a></li>
+											<li><a href="job-list.php">Job List</a></li>
+											<li><a href="employers.php">Employers</a></li>
+											<li><a href="employees.php">Employees</a></li>
+											<li><a href="contact.php">Contact Us</a></li>
 											<li><a href="#">Go to top</a></li>
 
 										</ul>
@@ -637,11 +637,11 @@ $page = 1;
 							
 							<div class="col-sm-12 col-md-3 mt-30-sm">
 							
-								<h5 class="footer-title">Bwire Jobs Contact</h5>
+								<h5 class="footer-title">CareerConnect Jobs Contact</h5>
 								
-								<p>Address : Dar es salaam, Tanzania PO.BOX 14859</p>
-								<p>Email : <a href="mailto:mashauri@programmer.net">mashauri@programmer.net</a></p>
-								<p>Phone : <a href="tel:+255689938643">+255 689 938 643</a></p>
+								<p>Address : DBMT, University of Houston, Texas</p>
+								<p>Email : <a href="mailto:CareerConnect.group5@gmail.com">CareerConnect.group5@gmail.com</a></p>
+								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 
 							</div>
@@ -661,14 +661,14 @@ $page = 1;
 						
 							<div class="col-sm-4 col-md-4">
 					
-								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> BwireSoft</p>
+								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> CareerConnect Vision Software</p>
 								
 							</div>
 							
 							<div class="col-sm-4 col-md-4">
 							
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by Bwire Charles Mashauri</a></li>
+									<li><a >Developed by DBMT Project Group 5</a></li>
 								</ul>
 							
 							</div>

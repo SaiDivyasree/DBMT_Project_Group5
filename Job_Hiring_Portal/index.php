@@ -20,7 +20,7 @@ include 'constants/check-login.php';
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="300" />
-    <meta property="og:image:alt" content="Nightingale Jobs" />
+    <meta property="og:image:alt" content="CareerConnect Jobs" />
     <meta property="og:description" content="Online Job Management / Job Portal" />
 
 	<link rel="shortcut icon" href="images/ico/favicon.png">
@@ -607,7 +607,7 @@ include 'constants/check-login.php';
 							<div class="col-sm-4 col-md-4">
 							
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by Nathaniel Nkrumah</a></li>
+									<li><a >Developed by DBMT Project Group 5</a></li>
 								</ul>
 							
 							</div>
